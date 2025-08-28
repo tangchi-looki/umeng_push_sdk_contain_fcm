@@ -1,0 +1,103 @@
+group 'com.umeng.push_sdk'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        //华为厂商推送
+//        maven { url 'https://developer.huawei.com/repo' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        //华为厂商推送
+//        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        //华为厂商推送
+        maven { url 'https://developer.huawei.com/repo' }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.umeng.message.flutter'
+    }
+
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 33
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//友盟推送组件
+dependencies {
+    api 'com.umeng.umsdk:common:9.6.8'
+    api 'com.umeng.umsdk:asms:1.8.2'
+    api 'com.umeng.umsdk:push:6.6.3'
+}
+
+//集成华为推送
+//apply plugin: 'com.huawei.agconnect'
+dependencies {
+    api 'com.umeng.umsdk:huawei-umengaccs:2.1.0'
+    api 'com.huawei.hms:push:6.12.0.300'
+}
+
+//集成小米推送
+dependencies {
+    api 'com.umeng.umsdk:xiaomi-umengaccs:2.1.0'
+    api 'com.umeng.umsdk:xiaomi-push:5.9.9'
+}
+
+//集成vivo推送
+dependencies {
+    api 'com.umeng.umsdk:vivo-umengaccs:2.1.0'
+    api 'com.umeng.umsdk:vivo-push:3.0.0.7'
+}
+
+//集成OPPO推送（gradle.properties中添加android.useAndroidX=true）
+dependencies {
+    api 'com.umeng.umsdk:oppo-umengaccs:2.1.0'
+    api 'com.umeng.umsdk:oppo-push:3.4.0'
+}
+
+//集成魅族推送
+dependencies {
+    api 'com.umeng.umsdk:meizu-umengaccs:2.1.0'
+    api 'com.umeng.umsdk:meizu-push:4.2.7'
+}
+
+//集成荣耀推送
+dependencies {
+    api 'com.umeng.umsdk:honor-umengaccs:2.1.0'
+    api 'com.umeng.umsdk:honor-push:7.0.61.303'
+}

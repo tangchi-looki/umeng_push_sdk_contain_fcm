@@ -1,0 +1,26 @@
+name: umeng_push_sdk
+description: u-push sdk plugin.
+version: 2.3.0
+homepage: https://www.umeng.com/
+
+environment:
+  sdk: ">=2.12.0 <4.0.0"
+  flutter: ">=1.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  umeng_common_sdk: ^1.2.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.umeng.message
+        pluginClass: UmengPushSdkPlugin
+      ios:
+        pluginClass: UmengPushSdkPlugin
