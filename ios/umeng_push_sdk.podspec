@@ -3,7 +3,7 @@
 # Run `pod lib lint umeng_push_sdk.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'umeng_push_sdk'
+  s.name             = 'umeng_push_sdk_contain_fcm'
   s.version          = '0.0.1'
   s.summary          = 'upush sdk plugin.'
   s.description      = <<-DESC

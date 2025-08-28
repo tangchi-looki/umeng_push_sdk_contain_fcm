@@ -101,3 +101,11 @@ dependencies {
     api 'com.umeng.umsdk:honor-umengaccs:2.1.0'
     api 'com.umeng.umsdk:honor-push:7.0.61.303'
 }
+
+//集成FCM推送
+dependencies {
+    api 'com.umeng.umsdk:fcm-umengaccs:2.0.0'
+    api platform('com.google.firebase:firebase-bom:31.2.3')
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-messaging'
+}

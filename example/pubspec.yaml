@@ -1,5 +1,5 @@
 name: umeng_push_example
-description: Demonstrates how to use the umeng_push_sdk plugin.
+description: Demonstrates how to use the umeng_push_sdk_contain_fcm plugin.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -10,8 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  umeng_push_sdk:
-    #    ^2.3.0
+  umeng_push_sdk_contain_fcm:
     path: ../
 
   cupertino_icons: ^1.0.0

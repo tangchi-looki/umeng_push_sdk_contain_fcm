@@ -17,6 +17,7 @@ import com.umeng.message.common.UPLog;
 import com.umeng.message.common.inter.ITagManager;
 import com.umeng.message.entity.UMessage;
 
+import org.android.agoo.fcm.FCMRegister;
 import org.android.agoo.honor.HonorRegister;
 import org.android.agoo.huawei.HuaWeiRegister;
 import org.android.agoo.mezu.MeizuRegister;
@@ -398,6 +399,12 @@ public class UmengPushSdkPlugin implements FlutterPlugin, MethodCallHandler {
                         HonorRegister.register(mContext);
                     } catch (Throwable e) {
                         UPLog.e(TAG, "honor register err:", e.getMessage());
+                    }
+
+                    try {
+                        FCMRegister.register(mContext);
+                    } catch (Throwable e) {
+                        UPLog.e(TAG, "fcm register err:", e.getMessage());
                     }
 
                 } catch (Throwable e) {

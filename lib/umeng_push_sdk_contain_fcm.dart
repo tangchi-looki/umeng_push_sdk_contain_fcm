@@ -1,4 +1,4 @@
-library umeng_push_sdk;
+library umeng_push_sdk_contain_fcm;
 
 import 'dart:async';
 import 'package:flutter/services.dart';
@@ -15,7 +15,8 @@ class UmengPushSdk {
 
   ///注册推送
   static Future<void> register(String iOSAppkey, String iOSChannel) async {
-    return await _channel.invokeMethod(_METHOD_REGISTER, {'iOSAppkey': iOSAppkey, 'iOSChannel': iOSChannel});
+    return await _channel.invokeMethod(
+        _METHOD_REGISTER, {'iOSAppkey': iOSAppkey, 'iOSChannel': iOSChannel});
   }
 
   ///设置deviceToken回调，仅支持Android

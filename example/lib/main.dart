@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:umeng_common_sdk/umeng_common_sdk.dart';
-import 'package:umeng_push_sdk/umeng_push_sdk.dart';
+import 'package:umeng_push_sdk_contain_fcm/umeng_push_sdk_contain_fcm.dart';
 
 import 'helper.dart';
 

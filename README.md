@@ -1,4 +1,56 @@
-# 友盟推送SDK插件 Flutter
+# 这里是友盟推送+flutter+fcm(谷歌推送)的使用步骤，其他厂商参考官方文档
+
+## 1.在Firebase控制台创建项目（直接创建android项目就行，不用管他的android步骤。我当时卡在这里好久），
+
+## 2.然后把秘钥上传到友盟fcm配置中（这一步可参考友盟厂商配置不在累诉）
+
+## 3.集成
+在工程 pubspec.yaml 中加入 dependencies
+
+```
+dependencies: 
+    umeng_push_sdk_contain_fcm: ^1.0.0
+```
+
+## 4.在android/build.gradle 中加入
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // 加入下面这行
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+## 5.在android/app中加入firebase services文件
+google-services.json
+
+## 6.在android/app/build.gradle 中加入
+// 加入下面这行
+apply plugin: 'com.google.gms.google-services'
+
+## 7.在android/app/proguard-rules.pro 中加入
+// 加入下面这行
+-keep class org.android.agoo.fcm.* {*;}
+
+## 8.恭喜你，完成了
+有问题可交流沟通
+https://github.com/YangJianFei/umeng_push_sdk_contain_fcm
+
+## 注意事项，
+1.调试时可通过调试控制台查看fcm是否正常启动，正常启动后会打印fcm xxx token(可通过过滤查看)
+不通过也会有报错信息，方便查看失败原因
+
+
+2.手机必须开启谷歌服务，科学上网，
+
+
+
+
+# 下面这些是友盟推送sdk官方使用搬过来的（可直接去看官方使用文档）
 ## 集成
 在工程 pubspec.yaml 中加入 dependencies
 

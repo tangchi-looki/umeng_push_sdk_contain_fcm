@@ -1,6 +1,6 @@
-name: umeng_push_sdk
+name: umeng_push_sdk_contain_fcm
 description: u-push sdk plugin.
-version: 2.3.0
+version: 1.0.0
 homepage: https://www.umeng.com/
 
 environment:
