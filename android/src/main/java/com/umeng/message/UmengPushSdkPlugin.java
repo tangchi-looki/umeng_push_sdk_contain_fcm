@@ -33,7 +33,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+// import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /**
  * 推送Flutter插件类
@@ -94,6 +94,10 @@ public class UmengPushSdkPlugin implements FlutterPlugin, MethodCallHandler {
         mChannel = null;
     }
 
+    // Legacy registration method for older Flutter versions
+    // This method is kept for backward compatibility but commented out
+    // to avoid compilation errors with newer Flutter versions
+    /*
     public static void registerWith(Registrar registrar) {
         MethodChannel channel = new MethodChannel(registrar.messenger(), "u-push");
         UmengPushSdkPlugin plugin = new UmengPushSdkPlugin();
@@ -101,6 +105,7 @@ public class UmengPushSdkPlugin implements FlutterPlugin, MethodCallHandler {
         plugin.mChannel = channel;
         channel.setMethodCallHandler(plugin);
     }
+    */
 
     @Override
     public void onMethodCall(MethodCall call, Result result) {
