@@ -60,7 +60,7 @@ android {
 
 //友盟推送组件
 dependencies {
-    api 'com.umeng.umsdk:common:9.6.8'
+    api 'com.umeng.umsdk:common:9.6.8+'
     api 'com.umeng.umsdk:asms:1.8.2'
     api 'com.umeng.umsdk:push:6.7.5'
 }
