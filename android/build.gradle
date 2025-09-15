@@ -62,7 +62,7 @@ android {
 dependencies {
     api 'com.umeng.umsdk:common:9.6.8'
     api 'com.umeng.umsdk:asms:1.8.2'
-    api 'com.umeng.umsdk:push:6.6.3'
+    api 'com.umeng.umsdk:push:6.7.5'
 }
 
 //集成华为推送
