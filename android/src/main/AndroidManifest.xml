@@ -81,10 +81,6 @@
             android:name="com.vivo.push.app_id"
             android:value="${VIVO_APP_ID}" />
 
-        <meta-data
-            android:name="com.hihonor.push.app_id"
-            android:value="${HONOR_APP_ID}" />
-
         <activity
             android:name="com.umeng.message.UmengOfflineMessageActivity"
             android:exported="true"
