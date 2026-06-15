@@ -86,8 +86,8 @@ dependencies {
 
 //集成OPPO推送（gradle.properties中添加android.useAndroidX=true）
 dependencies {
-    api 'com.umeng.umsdk:vivo-umengaccs:+'
-    api 'com.umeng.umsdk:vivo-push:+'
+    api 'com.umeng.umsdk:oppo-umengaccs:+'
+    api 'com.umeng.umsdk:oppo-push:+'
 }
 
 //集成魅族推送
